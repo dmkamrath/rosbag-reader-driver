@@ -1,0 +1,3 @@
+[submodule "src/rosbag-reader"]
+	path = src/rosbag-reader
+	url = git@github.com:dmkamrath/rosbag-reader.git
