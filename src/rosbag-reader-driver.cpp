@@ -10,14 +10,15 @@ void onRosImage(sensor_msgs::Image::ConstPtr imageMsg)
 	if (imagePtr->image.empty())
 		return;
 	cv::imshow("im", imagePtr->image);
-	cv::waitKey(15);
+	cv::waitKey();
 }
 
 int main(int agrc, char** argv)
 {
 	std::cout << "Generated main program for project: rosbag-reader-driver" << std::endl;
 
-	RosbagReader r("/home/dan/ml/dat/vehicle_images_04_02/2021-03-27-11-49-03.bag", 0, 0);
+	//RosbagReader r("/home/dan/ml/dat/vehicle_images_04_02/2021-03-27-11-49-03.bag", 0, 0);
+	RosbagReader r("/home/dan/ml/dat/vehicle_images_04_02/2021-03-27-11-34-44.bag", 0, 0);
 
 	auto b = std::bind(&onRosImage, std::placeholders::_1);
 
